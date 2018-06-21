@@ -1,0 +1,291 @@
+
+/* Базовый контейнер табов */
+.tabs {
+  /* min-width: 320px;
+  max-width: 800px;
+  padding: 0px;
+  margin: 0 auto;  */
+}
+/* стили секций с содержанием */
+section {
+  display: none;
+  /* padding: 15px; */
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.tabs input {
+  display: none;
+}
+/* стили вкладок (табов) */
+.tabs label {
+  display: inline-block;
+    margin: 0 0 -1px;
+    padding: 2px 13.9px;
+    /* font-weight: 600; */
+    text-align: center;
+    color: #aaa;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    border-radius: 3px 3px 0 0;
+	font: 13px OpenSansCondensedbold, Arial, Helvetica, sans-serif;
+}
+
+/* изменения стиля заголовков вкладок при наведении */
+.tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* стили для активной вкладки */
+.tabs input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+}
+/* активация секций с помощью переключателя :checked */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+/* медиа запросы для различных типов носителей */  
+@media screen and (max-width: 680px) {
+  .tabs label {
+    font-size: 0;
+  }
+ 
+  .tabs label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tabs label {
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'OpenSansCondensedLight';
+    src: url('opensans-condlight-webfont.html');
+    src: local('☺'),
+    url('fonts/open_sans_condensed/open_sans_condensed-l.woff') format('woff'),
+    url('fonts/open_sans_condensed/open_sans_condensed-l.ttf') format('truetype'),
+    url('fonts/open_sans_condensed/open_sans_condensed-l.svg#OpenSansCondensedLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'OpenSansCondensedBold';
+    src: url('fonts/open_sans_condensed/open_sans_condensed-b.eot');
+    src: url('fonts/open_sans_condensed/open_sans_condensed-bd41d.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open_sans_condensed/open_sans_condensed-b.woff') format('woff'),
+         url('fonts/open_sans_condensed/open_sans_condensed-b.ttf') format('truetype'),
+         url('fonts/open_sans_condensed/open_sans_condensed-b.svg#OpenSansCondensedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.tog{font: 17px OpenSansCondensedLight, Arial, Helvetica, sans-serif;
+    color: #665227;
+    cursor: pointer;
+    border-bottom: dashed 1px #665227;}
+.lust{color: #000000;border-bottom: none;cursor: default;margin-left: 172px;font: 20px OpenSansCondensedbold, Arial, Helvetica, sans-serif;margin-top:155px;position:absolute;z-index:99;}
+
+.rg-image{
+	position:relative;
+	text-align:center;
+	line-height:0px;
+}
+.rg-image img{
+height: 515px;
+    width: 645px;
+    position: absolute;
+    z-index: -10;
+    margin-left: -480px;
+    margin-top: 0px;
+}
+.rg-image-nav a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#000 url(../img/nav.png) no-repeat -20% 50%;
+	width:28px;
+	height:100%;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.3;
+	outline:none;
+	-moz-border-radius: 10px 0px 0px 10px;
+	-webkit-border-radius: 10px 0px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+}
+.rg-image-nav a.rg-image-nav-next{
+	right:0px;
+	left:auto;
+	background-position:115% 50%;
+	-moz-border-radius: 0px 10px 10px 0px;
+	-webkit-border-radius: 0px 10px 10px 0px;
+	border-radius: 0px 10px 10px 0px;
+}
+.rg-image-nav a:hover{
+	opacity:0.8;
+}
+.rg-caption {
+	
+	margin-top:15px;
+	  position: absolute;
+}
+.rg-caption p{
+	font-size:11px;
+	letter-spacing:2px;
+	font-family: 'Trebuchet MS', 'Myriad Pro', Arial, sans-serif;
+	line-height:16px;
+	padding:0 15px;
+	text-transform:uppercase;
+}
+
+
+.rg-loading{
+	width:46px;
+	height:46px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	background:#000 url(../img/ajax-loader.gif) no-repeat center center;
+	margin:-23px 0px 0px -23px;
+	z-index:100;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	opacity:0.7;
+}
+
+
+.slider {
+ z-index:35;
+ height: 290px;
+ overflow: hidden;
+  width:742px;
+  margin: 130px 0px 7px;
+ position: absolute;
+ }
+ .slider ul,
+ .slider li {
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ }
+ .slider ul {
+ width: 9999px; 
+  margin: 125px 4px 7px;
+ }
+ .slider ul li {
+ list-style-type: none;
+ float: left;
+ width: 700px;
+ height: 290px;
+ margin-top:-74px;
+ }
+ .slider .nav {
+ position: absolute;
+ left: 15px;
+ bottom: 12px; 
+ }
+ .slider .nav span {
+ opacity: 0.9;
+ background: #fff;
+ margin: 45px 17px 261px -1px;
+ width: 16px;
+ height: 16px;
+ border-radius: 8px;
+ cursor: pointer;
+ overflow: hidden;
+ display: block;
+ float: left;
+ box-shadow: 0 1px 2px #000;
+ }
+ .slider .nav span.on {
+ background: #2e9419;
+ }
+
+
+/* Стили плагина Elastislide */
+.es-carousel-wrapper{
+	/* padding: 0px; */
+    position: relative;
+ /*    margin-bottom: 3px; */
+    width: 960px;
+	background: #fff;
+    padding: 0px 0px 3px 0px;
+    margin-top: 40px;
+}
+.es-carousel{
+	overflow:hidden;
+}
+.es-carousel ul{
+	display:none;
+}
+.es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+	width:40px !important;
+	margin-top: -13px;
+}
+.es-carousel ul li a{
+	display:block;
+	-webkit-touch-callout:none;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+/* .es-carousel ul li a:hover{
+	border-color: #C7B009;opacity:1;
+} */
+.es-carousel ul li.selected a{
+	border:2px solid #000;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.es-carousel ul li a img{
+	display:block;
+	border:none;
+	max-height:100%;
+	max-width:100%;
+}
+.es-nav span{
+	position:absolute;
+	top:42%;
+	left:-13px;
+	background:transparent url(../img/nav_thumbs.png) no-repeat top left;
+	width:14px;
+	height:26px;
+	margin-top: -8px;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.8;
+}
+.es-nav span.es-nav-next{
+	right:-13px;
+	left:auto;
+	background-position:top right;
+}
+.es-nav span:hover{
+	opacity:1;
+}
